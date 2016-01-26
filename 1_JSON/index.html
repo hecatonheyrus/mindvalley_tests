@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Resume viewer</title>
+
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/css/main.css" rel="stylesheet">
+
+   
+
+  </head>
+
+  <body>
+
+  <header class="bs-header">
+    <div class="container">
+       <h1>JSON Resume viewer and converter</h1>
+       <p>Please select your resume file in JSON format</p>
+     </div>
+  </header>
+  
+
+   <div class="input-wrapper">
+       <input class="default-file-select" type="file" name="jsonfile" onchange="getJSONObject(this.value)">
+   </div>
+ 
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 main-container">
+        </div>
+      </div>
+    </div>
+
+    <script type="text/template" id="tpl-items">
+    
+      <ul class="media-list row items-container"></ul>
+    </script>
+
+    <script type="text/template" id="tpl-item">
+      
+      <div class="media-heading">
+    
+        <td>
+         <tr>
+          <%- item_name %>:
+         </tr>
+         <tr> 
+          <%- item_value %>
+         </tr>
+        </td>
+      
+      </div>
+      
+      <hr>
+    </script>
+
+    
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/underscore/underscore.js"></script>
+    <script src="vendor/backbone/backbone.js"></script>
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/models/item.js"></script>
+    <script src="app/js/collections/items.js"></script>
+    <script src="app/js/views/item.js"></script>
+    <script src="app/js/views/items.js"></script>
+    <script src="app/js/router.js"></script>
+
+    <script language = "javascript">
+     window.JSON = {
+        parse: function(JSONString){
+          return eval('(' + JSONString + ')');
+        },
+        stringify: function(JSONObject){
+          if (JSONObject instanceof Object){
+            var stringOutput = '';
+            if (JSONObject.constructor === Array){
+              for (var i=0; i < JSONObject.length; stringOutput += this.stringify(JSONObject[i])+',',i++){
+                 return '[' + stringOutput.substr(0,stringOutput.length - 1) + ']';
+              
+              }
+
+            }
+
+            if (JSONObject.toString()!==Object.prototype.toString()){
+              return '"' + JSONObject.toString().replace(/"/g, '\\$&') + '"';
+
+            }
+
+            for (var item in JSONObject){
+              stringOutput+= '"' + item.replace(/"/g, '\\$&') + '":' + this.stringify(JSONObject[item])+',';
+
+            }
+
+            return '{' + stringOutput.substr(0,stringOuput.length-1) + '}';
+
+          }
+
+         return typeof JSONObject === 'string' ? '"'+JSONObject.replace(/"/g, '\\$&')+'"' : String(JSONObject);
+
+        }
+
+     }
+
+    </script>
+
+     <script language = "javascript">
+
+     var loadJSON = function(json_file,callback){
+       var xhr = new XMLHttpRequest();
+
+       xhr.overrideMimeType("application/json");
+       xhr.open('GET',json_file,true);
+       
+       xhr.onreadystatechange = function(){
+         
+         if (xhr.readyState == 4 && xhr.status == "200")
+            
+            callback(xhr.responseText);
+
+       };
+       xhr.send(null);
+     }
+
+    </script>
+
+    <script language = "javascript">
+      var getJSONObject = function(json_file){
+         
+          loadJSON(json_file,function(response){
+            
+            var actualJSON = window.JSON.parse(response);
+       
+
+            $(function() {
+              ResumeViewer.start(actualJSON);
+                   
+                });
+       });
+    };
+    </script>
+
+   <!--
+    <script>
+      $(function() {
+     
+        ResumeViewer.start({
+  
+          items: [
+            {
+              item_name : 'NAME',
+              item_value: 'Vadim'
+            },
+              
+            {
+             item_name : 'LASTNAME',
+              item_value: 'Shandrikov'
+            },
+
+            {
+             item_name : 'DATE OF BIRTH',
+             item_value: '29/05/1973'
+            },
+          
+            {
+             item_name : 'PLACE OF BIRTH',
+             item_value: 'Vitebsk'
+            }
+          ]
+        });
+      });
+    </script>
+    -->
+  
+
+  </body>
+
+
+
+</html>  

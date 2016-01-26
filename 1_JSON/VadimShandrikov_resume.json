@@ -1,0 +1,98 @@
+
+{
+            items: [
+            {
+              item_name : 'NAME',
+              item_value: 'Vadim'
+            },
+              
+            {
+             item_name : 'LASTNAME',
+              item_value: 'Shandrikov'
+            },
+          
+            {
+             item_name : 'CURRENT LOCATION',
+             item_value: 'A-2-10 Palm Spring Condo Jalan PJU3/29 Kota Damansara, 47810 Petaling Jaya'
+            },
+          
+            {
+             item_name : 'EMAIL',
+             item_value: 'ahamemnonvs@gmail.com'
+            },
+
+             {
+             item_name : 'OBJECTIVE',
+             item_value: 'I am well-educated in math, computer programming and computer science. I possessed a great leadership skill, mentor and a quick learner. My main objective is to share my knowledge, skills and ideas with my future employer'
+            },
+
+            {
+             item_name : 'SKILLS',
+             item_value: 'C/C++/C# Programming, x86 assembler programming, Java Programming, Python, Ruby, Lua programming, JavaScript programming, HTML Programming and Web development, UNIX based OS administration, Mobile Devices Programming (Android), Database Programming and Administration, Software Testing, Code Refactoring'
+            },
+
+             {
+             item_name : 'EXPERIENCE',
+             item_value: 'EKC Minsk. Senior Software & Web Developer – Manager –Jan 1998 to present.As a senior developer, I developed software for data, image, video processing applications using C++, C# and Java languages. I am also experienced well in database development (Oracle, MS SQL Server, PostgreSQL) and database administration, and in UNIX based operation systems administration. I took a part in developing Web applications using JavaScript (Node.js, Backbone.js) and Web application testing using Jasmine testing framework. I have deep skills in code refactoring.I have also 3 certificates in computer forensics: Information search and restore, reverse engineering and network incident investigations. I have deep skills in programs disassembling and debugging, searching for malware functionality in executable and other files. Main tools I used to do it are: - IDA Pro interactive disassembler. I can write scripts in in-built IDA language and modules (plugins) in C++ for it; - Immunity Debugger. I can write scripts for it in Python language. - gdb, open source debugger for UNIX based systems. I used it always for Linux apps debugging. Besides, I have written many tools for current reverse engineering tasks in Python, Ruby and Lua programming languages. Examples of my Ruby projects can be found on my GitHub repository on https://github.com/luarviq. My current project is distributed data storage for graphical and video information. Database engine is PostgreSQL, backend is written in JavaScript using Node.js library, frontend is written also in JavaScript using Backbone.js library' 
+	   
+            },
+
+            {
+             item_name : 'EXPERIENCE',
+             item_value: 'Belarussian Academy of Science.Research Fellow –Senior Manager – Dec 2014 to present. As a research fellow, I developed math methods and software applications for image and video processing, detection of video an image forgery. Main subject of my researches is machine learning and pattern recognition. I am mathematician, so I am experienced in finding new ways in algorithms optimization. While working on my science projects, I had to write many tests on data and signal processing in MATLAB, so I am experienced well in MATLAB m-language and Simulink. Statistical processing of experiment’s results is written also in m-language. I have publications in Academy of Science journals on this subject. I have also experience in video codecs developing and testing.'
+
+            },
+
+             {
+             item_name : 'EDUCATION',
+             item_value: ' Vitebsk Technology University – Belarus ,Master’s Degree in Engineering (Mechatronic/Electromechanical , Sept 1990 – June 1996.Vitebsk University – Belarus ,  Master’s Degree in Computer Science/information Technology , Jan 2005 – Aug 2006. Vitebsk University – Belarus, Master’s Degree in Law , Jan 2000 – Aug 2003.Vitebsk University – Belarus Master in Forensics, Jan 2008 – August 2011- Information search and restore (2008),- reverse engineering (2010),- network incident investigations (2011)'
+             },
+
+             {
+             item_name : 'LANGUAGES',
+             item_value: 'English,Russian'
+             },
+
+             {
+             item_name : 'GENDER',
+             item_value: 'Male'
+             },
+
+             {
+             item_name : 'PHONE NUMBER',
+             item_value: '0173563859'
+             },
+
+             {
+             item_name : 'NATIONALITY',
+             item_value: 'Belarus'
+             },
+
+             {
+             item_name : 'AGE',
+             item_value: '42'
+             },
+
+             {
+             item_name : 'HOBBIES',
+             item_value: 'Reading, Coding, Writing journals, travelling, Running, Sports'
+             },
+
+             {
+             item_name : 'CURRENT SALARY',
+             item_value: 'USD 4000'
+             },
+
+             {
+             item_name : 'EXPECTED SALARY',
+             item_value: 'Will discuss further'
+             },
+
+             {
+             item_name : 'REASON FOR LEAVING',
+             item_value: 'To join my family in Malaysia'
+             }
+                   
+
+          ]
+        }
